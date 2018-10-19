@@ -8,12 +8,18 @@ fun jsNew(cls) {
 class MainActivity extends Activity {   
     prop main;
 	fun onCreate() {
+	    var a = 9;
+	    var b = 5;
+	    var c = a % b;
+	    //log(c);
+	    Util.showToast("MainActivity dev="+c);
+	
 	    Util.log("main function begin");
 	    
 	    var root = ViewDoc.rootView();
 	    var appBox = root.itemByID(ViewGroup, "AppBox");
 	    
-        this.main = ViewDoc.createView(MainView, "boyia://apps/contacts/layout/main.ui");
+        this.main = ViewDoc.createView(MainView, "boyia://apps/contacts/view/main.ui");
 	    this.main.initView();
 	    
 	    appBox.appendView(this.main);
@@ -23,8 +29,8 @@ class MainActivity extends Activity {
 	    appBox.draw();
 	    appBox.commit();
 	    
-	    Util.showToast("test mjs callstaticmethod");
-	    Network.load("https://raw.githubusercontent.com/damonyan1985/BoyiaUI/dev/apps/contacts/json/mock.json", this.loadCallback, this);
+	    //Util.showToast("test mjs callstaticmethod");
+	    Network.load("https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/src/contacts/json/mock.json", this.loadCallback, this);
 	}
 	
 	fun loadCallback(data) {
@@ -38,7 +44,7 @@ class MainActivity extends Activity {
 	        size = size - 1;
 	        var categoryItem = obj.data.categoryList.get(size);
 	        
-	        view = ViewDoc.createView(CategoryItem, "boyia://apps/contacts/layout/category_item.ui");
+	        view = ViewDoc.createView(CategoryItem, "boyia://apps/contacts/view/category_item.ui");
 	        view.initView();
 	        view.setTitle(categoryItem.title);
 	        categoryView.appendView(view);
@@ -51,7 +57,7 @@ class MainActivity extends Activity {
 	    while (size > 0) {
 	        size = size - 1;
 	        var detailItem = detailList.get(size);
-	        view = ViewDoc.createView(NewTextItem, "boyia://apps/contacts/layout/news_text_item.ui");
+	        view = ViewDoc.createView(NewTextItem, "boyia://apps/contacts/view/news_text_item.ui");
 	        view.initView();
 	        detailContainer.appendView(view);
 	        view.setTitle(detailList.get(size).title);

@@ -23,10 +23,10 @@
 <script src="boyiasdk://sdk/AppStack.boyia" />
 <script src="boyiasdk://sdk/App.boyia" />
 <script src="boyiasdk://sdk/Activity.boyia" />
-<script src="boyia://apps/contacts/view/PosterView.boyia" />
-<script src="boyia://apps/contacts/view/NewTextItem.boyia" />
-<script src="boyia://apps/contacts/view/CategoryItem.boyia" />
-<script src="boyia://apps/contacts/view/SearchHeader.boyia" />
-<script src="boyia://apps/contacts/view/MainView.boyia" />
-<script src="boyia://apps/contacts/view/Main.boyia" />
+<script src="boyia://apps/contacts/src/PosterView.boyia" />
+<script src="boyia://apps/contacts/src/NewTextItem.boyia" />
+<script src="boyia://apps/contacts/src/CategoryItem.boyia" />
+<script src="boyia://apps/contacts/src/SearchHeader.boyia" />
+<script src="boyia://apps/contacts/src/MainView.boyia" />
+<script src="boyia://apps/contacts/src/Main.boyia" />
 </html>

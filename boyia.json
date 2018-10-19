@@ -1,16 +1,9 @@
 {
-    "jar" : {
-        "version" : 1,
-        "path" : ""
-    },
-    "so"  : {
-        "version" : 1,
-        "path" : ""
-    },
     "apps" : [{
         "version" : 1,
         "path" : "boyiasdk://apps/contacts.zip",
-        "name" : "contacts"
+        "url" : "https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/apps/contacts.zip"
+        "name" : "contacts",
+        "isEntry" : true
     }],
-    "entry" : "contacts"
 }
