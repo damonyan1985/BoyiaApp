@@ -1,7 +1,6 @@
 {
     "apps" : [{
-        "version" : 1,
-        "path" : "boyiasdk://apps/contacts.zip",
+        "versionCode" : 1,
         "url" : "https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/apps/contacts.zip",
         "name" : "contacts",
         "isEntry" : true
