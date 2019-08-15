@@ -2,7 +2,8 @@
     "code": 200,
     "sdk": {
         "versionCode": 1,
-        "url": "https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/out/sdk.zip"
+        "url": "https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/out/sdk.zip",
+        "name": "sdk"
     },
     "apps": [
         {
