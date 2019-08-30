@@ -7,7 +7,7 @@ fun jsNew(cls) {
 
 class MainActivity extends Activity {   
     prop main;
-	fun onCreate() {
+    fun onCreate() {
 	    var a = 9;
 	    var b = 5;
 	    var c = a % b;
@@ -16,21 +16,25 @@ class MainActivity extends Activity {
 	
 	    Util.log("main function begin");
 	    
-	    var root = ViewDoc.rootView();
-	    var appBox = root.itemByID(ViewGroup, "AppBox");
-	    
-        this.main = ViewDoc.createView(MainView, "boyia://apps/contacts/view/main.ui");
+	    //var root = ViewDoc.rootView();
+	    //var appBox = root.itemByID(ViewGroup, "AppBox");
+	    var appBox = ViewRoot.getRoot();
+
+        this.main = ViewDoc.createView(MainView, "boyia://apps/contacts/view/main.boui");
 	    this.main.initView();
 	    
 	    appBox.appendView(this.main);
 	    
-	    //this.setContent(appBox);
+	    this.setContent(appBox);
 	    //super.onCreate();
-	    appBox.draw();
-	    appBox.commit();
+	    //appBox.draw();
+	    //appBox.commit();
 	    
-	    //Util.showToast("test mjs callstaticmethod");
-	    Network.load("https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/src/contacts/json/mock.json", this.loadCallback, this);
+	    //Util.showToast("test boyia callstaticmethod");
+	    this.fetch("https://raw.githubusercontent.com/damonyan1985/BoyiaApp/master/src/contacts/json/mock.json", this.loadCallback);
+
+	    Util.log("test super begin");
+	    super.test();
 	}
 	
 	fun loadCallback(data) {
@@ -57,7 +61,7 @@ class MainActivity extends Activity {
 	    while (size > 0) {
 	        size = size - 1;
 	        var detailItem = detailList.get(size);
-	        view = ViewDoc.createView(NewTextItem, "boyia://apps/contacts/view/news_text_item.ui");
+	        view = ViewDoc.createView(NewTextItem, "boyia://apps/contacts/view/news_text_item.boui");
 	        view.initView();
 	        detailContainer.appendView(view);
 	        view.setTitle(detailList.get(size).title);
@@ -65,8 +69,9 @@ class MainActivity extends Activity {
 	        view.setImage(detailList.get(size).image1);
 	    }
 
-	    this.main.draw();
-	    this.main.commit();    
+	    //this.main.draw();
+	    //this.main.commit();   
+	    this.draw(); 
 	}
 }
 
